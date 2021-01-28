@@ -17,7 +17,7 @@ namespace WebApplication3.Models
         public DbSet<course> courses { get; set; }
         public DbSet<Klass> Klasses { get; set; }
 
-
+        public DbSet<Log> Logs { get; set; }
 
 
     }

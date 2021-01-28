@@ -36,6 +36,30 @@ namespace WebApplication3.Migrations
                     b.ToTable("Klasses");
                 });
 
+            modelBuilder.Entity("WebApplication3.Models.Log", b =>
+                {
+                    b.Property<int>("logId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("ActionName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EntityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("credate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("userId")
+                        .HasColumnType("int");
+
+                    b.HasKey("logId");
+
+                    b.ToTable("Logs");
+                });
+
             modelBuilder.Entity("WebApplication3.Models.Student", b =>
                 {
                     b.Property<int>("StudentId")

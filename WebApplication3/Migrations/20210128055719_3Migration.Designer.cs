@@ -10,8 +10,8 @@ using WebApplication3.Models;
 namespace WebApplication3.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210121062452_4mig")]
-    partial class _4mig
+    [Migration("20210128055719_3Migration")]
+    partial class _3Migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,6 +36,30 @@ namespace WebApplication3.Migrations
                     b.HasIndex("TeacherId");
 
                     b.ToTable("Klasses");
+                });
+
+            modelBuilder.Entity("WebApplication3.Models.Log", b =>
+                {
+                    b.Property<int>("logId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("ActionName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EntityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("credate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("userId")
+                        .HasColumnType("int");
+
+                    b.HasKey("logId");
+
+                    b.ToTable("Logs");
                 });
 
             modelBuilder.Entity("WebApplication3.Models.Student", b =>
