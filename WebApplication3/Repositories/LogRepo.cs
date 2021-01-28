@@ -11,14 +11,14 @@ namespace WebApplication3.Repositories
     {
         public Context context = new Context();
 
-        public bool Add(string ActionName,string credate,int userid,string entityname)
+        public bool Add(string ControllerName, string ActionName,string username)
         {
             Log log = new Log()
             {
                 ActionName = ActionName,
-                credate=credate,
-                userId=userid,
-                EntityName= entityname 
+                ControllerName= ControllerName,
+                username =username, 
+                
               
             };
             context.Logs.Add(log);

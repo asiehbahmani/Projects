@@ -46,14 +46,11 @@ namespace WebApplication3.Migrations
                     b.Property<string>("ActionName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EntityName")
+                    b.Property<string>("ControllerName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("credate")
+                    b.Property<string>("username")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("userId")
-                        .HasColumnType("int");
 
                     b.HasKey("logId");
 

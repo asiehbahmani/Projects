@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebApplication3.MiddleWares;
 
 namespace WebApplication3
 {
@@ -45,6 +46,9 @@ namespace WebApplication3
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware <LogMiddleWare>();
+
 
             app.UseEndpoints(endpoints =>
             {

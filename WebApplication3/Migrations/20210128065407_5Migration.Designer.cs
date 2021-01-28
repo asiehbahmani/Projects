@@ -10,8 +10,8 @@ using WebApplication3.Models;
 namespace WebApplication3.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210128055719_3Migration")]
-    partial class _3Migration
+    [Migration("20210128065407_5Migration")]
+    partial class _5Migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,14 +48,11 @@ namespace WebApplication3.Migrations
                     b.Property<string>("ActionName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EntityName")
+                    b.Property<string>("ControllerName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("credate")
+                    b.Property<string>("username")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("userId")
-                        .HasColumnType("int");
 
                     b.HasKey("logId");
 
